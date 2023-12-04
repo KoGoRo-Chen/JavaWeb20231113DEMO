@@ -37,7 +37,7 @@ public class GuestbookDaoMySQL implements guestbookDAO {
 			String password = "12345678";
 			conn = DriverManager.getConnection(url, username, password);
 		} catch (SQLException | ClassNotFoundException e) {
-			e.printStackTrace();
+			e.printStackTrace();sss
 		}
 		*/
 	}
