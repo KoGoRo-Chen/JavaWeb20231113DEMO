@@ -1,9 +1,8 @@
-package servlet.guestbook.controller;
+package guestbook.controller;
 
 import java.io.IOException;
 import java.util.Date;
 import java.util.List;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,14 +10,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import servlet.guestbook.model.Guestbook;
-import servlet.guestbook.model.GuestbookDaoInMemory;
-import servlet.guestbook.model.guestbookDAO;
+import guestbook.model.Guestbook;
+import guestbook.model.guestbookDAO;
+import guestbook.model.GuestbookDaoMySQL;
 
 @WebServlet("/guestbook")
 //使用@WebServlet("/guestbook")，当有请求访问 /guestbook 路径时，容器（比如Tomcat）就会将请求交给标有这个注解的Servlet类进行处理。
 public class GuestbookServlet extends HttpServlet {
-	private guestbookDAO guestbookdao = new GuestbookDaoInMemory();
+	private guestbookDAO guestbookdao = new GuestbookDaoMySQL();
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

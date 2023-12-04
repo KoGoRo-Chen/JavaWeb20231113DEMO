@@ -1,1 +1,1 @@
-package servlet.guestbook.model;
+package guestbook.model;

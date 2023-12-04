@@ -1,1 +1,1 @@
-package servlet.guestbook.controller;
+package guestbook.controller;

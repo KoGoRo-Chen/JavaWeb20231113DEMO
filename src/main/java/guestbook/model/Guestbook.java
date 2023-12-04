@@ -1,4 +1,4 @@
-package servlet.guestbook.model;
+package guestbook.model;
 
 import java.util.Date;
 
